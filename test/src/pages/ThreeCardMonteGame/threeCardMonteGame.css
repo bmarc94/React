@@ -1,0 +1,148 @@
+html {
+    background: #ece8d9;
+}
+
+div.threeCardMonte {
+    min-width: 900px;
+    text-align: center;
+    font-size: 50px;
+}
+
+div.threeCardMonte span.threeCardMonteLog {
+    min-width: 900px;
+}
+
+div.threeCardMonte button {
+    font-size: 30px;
+    padding: 5px;
+}
+
+div.threeCardMonte div.card {
+    position: relative;
+    display: inline-block;
+    width: 225px;
+    height: 220px;
+    margin: 20px;
+    background-image: url('img/shell.png');
+}
+
+div.threeCardMonte div.testOverride {
+    position: relative;
+    display: inline-block;
+    width: 225px;
+    height: 220px;
+    margin: 20px;
+    background-image: url('');
+    background-color: black;
+    content:"override";
+}
+
+div.threeCardMonte div.card.selected {
+    border: 2px solid #000000;
+}
+
+div.threeCardMonte div.card.wrong {
+    border: 2px solid red;
+}
+
+div.threeCardMonte div.card.correct {
+    border-color: green !important;
+}
+
+div.expected {
+    background-image: url('img/pearl.png')!important;
+}
+
+
+div.animated div.card {
+    animation-duration: 3s;
+}
+
+div.animated div.card:nth-child(1) {
+    animation-name: firstCardAnimation;
+}
+
+div.animated div.card:nth-child(2) {
+    animation-name: secondCardAnimation;
+}
+
+div.animated div.card:nth-child(3) {
+    animation-name: thirdCardAnimation;
+}
+
+@keyframes firstCardAnimation {
+    0% {
+        left: 0px;
+    }
+    12.5% {
+        left: 265px;
+    }
+    25% {
+        left: 510px;
+    }
+    37.5% {
+        left: 265px;
+    }
+    50% {
+        left: 265px;
+    }
+    62.5% {
+        left: 265px;
+    }
+    75% {
+        left: 265px;
+    }
+    100% {
+        left: 0px;
+        z-index: 10;
+    }
+}
+
+@keyframes secondCardAnimation {
+    0% {
+        left: 0px;
+    }
+    12.5% {
+        left: -265px;
+    }
+    25% {
+        left: 0px;
+    }
+    37.5% {
+        left: 265px;
+    }
+    50% {
+        left: -265px;
+    }
+    75% {
+        left: 0px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes thirdCardAnimation {
+    0% {
+        left: 0px;
+    }
+    12.5% {
+        left: 0px;
+    }
+    25% {
+        left: -510px;
+    }
+    37.5% {
+        left: -510px;
+    }
+    50% {
+        left: 0px;
+    }
+    75% {
+        left: -265px;
+    }
+    100% {
+        left: 0px;
+        z-index: 10;
+    }
+}
